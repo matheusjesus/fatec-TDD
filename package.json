@@ -1,0 +1,38 @@
+{
+  "name": "fatec-node-2023",
+  "version": "1.0.0",
+  "description": "1. Instalar o Node.js, versão mais atual\r   * No Windows: https://nodejs.org/en\r   * No Linux:\r    > sudo apt-get update && sudo apt-get install nodejs && sudo apt-get install npm",
+  "main": "src/index.ts",
+  "scripts": {
+    "copyfiles": "rimraf dist && copyfiles -u 1 src/**/*.html src/**/*.css src/**/*.js dist/",
+    "build": "npm run copyfiles && tsc",
+    "start": "npm run build && node dist/src/index.js",
+    "test": "jest --passWithNoTests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matheusjesus/fatec-node-2023.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matheusjesus/fatec-node-2023/issues"
+  },
+  "homepage": "https://github.com/matheusjesus/fatec-node-2023#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/jest": "^29.5.4",
+    "@types/node": "^20.5.9",
+    "copyfiles": "^2.4.1",
+    "jest": "^29.6.4",
+    "jest-mock-req-res": "^1.0.2",
+    "rimraf": "^5.0.1",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.2.2"
+  }
+}
