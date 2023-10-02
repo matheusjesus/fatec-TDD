@@ -1,4 +1,4 @@
-# fatec-TDD
+# fatec-node-2023
 
 ## Iniciando um projeto Node.js
 1. Instalar o Node.js, versão mais atual
